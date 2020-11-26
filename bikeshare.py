@@ -247,8 +247,8 @@ def raw_data(df):
             print('')
         while True:
             print('')
-            more_display = input('Would you like to see more raw data?\nEnter yes or no.\n')
-            if more_display.lower() == 'yes':
+            further_display = input('Would you like to see more raw data?\nEnter yes or no.\n')
+            if further_display.lower() == 'yes':
                 startline = stopline
                 stopline += 5
                 for i in range(startline, stopline):
@@ -256,7 +256,7 @@ def raw_data(df):
                     print('')
                     print('')
                 continue
-            elif more_display.lower() != 'yes':
+            elif further_display.lower() != 'yes':
                 print('Ok, stop display of raw data.')
                 break
     else:
