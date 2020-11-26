@@ -1,5 +1,5 @@
 ### Date created
-26.11.2020
+11/26/2020
 
 ### Project Title
 Analysis of US Bikeshare Data in Python
