@@ -169,8 +169,9 @@ def station_stats(df):
     print('Most common end station:', common_end)
 
     #display most frequent combination of start station and end station trip
+    df['begin'] = 'From '
     df['space'] = ' to '
-    df['StartEnd'] = df['Start Station'] + df['space'] + df['End Station']
+    df['StartEnd'] = df['begin'] + df['Start Station'] + df['space'] + df['End Station']
     common_startend = df['StartEnd'].mode()[0]
     print('Most frequent combination of start and end station:', common_startend)
 
