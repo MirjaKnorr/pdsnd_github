@@ -206,14 +206,14 @@ def user_stats(df, city):
     start_time = time.time()
 
     #Display counts of user types
-    #Do not drop NAs because I am interested in the amount of missing information.
+    #Do not drop NAs.
     user_types = df['User Type'].value_counts(dropna=False)
     city = city
     print('Counts of User Types:\n', user_types)
     print('')
 
     #Display counts of gender
-    #Do not drop NAs because I am interested in the amount of missing information.
+    #Do not drop NAs.
     if city == 'washington':
         print('We do not have gender information for Washington.')
     else:
