@@ -19,12 +19,9 @@ def get_filters():
     input('Press enter to continue.')
 
     #User input for city (chicago, new york city, washington) using a while loop to handle invalid inputs
-    print('')
-    print('')
-    print('First, we will choose a city.')
+    print('\n \n First, we will choose a city.\n \n')
     print('You can select one of the following three cities:\n Chicago\n New York City\n Washington')
-    print('')
-    print('')
+
 
     valid_city = ['Chicago', 'New York City', 'Washington', 'chicago', 'new york city', 'washington']
 
