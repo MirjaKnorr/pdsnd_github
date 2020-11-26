@@ -19,12 +19,9 @@ def get_filters():
     input('Press enter to continue.')
 
     #User input for city (chicago, new york city, washington) using a while loop to handle invalid inputs
-    print('')
-    print('')
-    print('First, we will choose a city.')
+    print('\n \n First, we will choose a city.\n \n')
     print('You can select one of the following three cities:\n Chicago\n New York City\n Washington')
-    print('')
-    print('')
+
 
     valid_city = ['Chicago', 'New York City', 'Washington', 'chicago', 'new york city', 'washington']
 
@@ -172,8 +169,9 @@ def station_stats(df):
     print('Most common end station:', common_end)
 
     #display most frequent combination of start station and end station trip
+    df['begin'] = 'From '
     df['space'] = ' to '
-    df['StartEnd'] = df['Start Station'] + df['space'] + df['End Station']
+    df['StartEnd'] = df['begin'] + df['Start Station'] + df['space'] + df['End Station']
     common_startend = df['StartEnd'].mode()[0]
     print('Most frequent combination of start and end station:', common_startend)
 
@@ -252,8 +250,8 @@ def raw_data(df):
             print('')
         while True:
             print('')
-            more_display = input('Would you like to see more raw data?\nEnter yes or no.\n')
-            if more_display.lower() == 'yes':
+            further_display = input('Would you like to see more raw data?\nEnter yes or no.\n')
+            if further_display.lower() == 'yes':
                 startline = stopline
                 stopline += 5
                 for i in range(startline, stopline):
@@ -261,7 +259,7 @@ def raw_data(df):
                     print('')
                     print('')
                 continue
-            elif more_display.lower() != 'yes':
+            elif further_display.lower() != 'yes':
                 print('Ok, stop display of raw data.')
                 break
     else:
