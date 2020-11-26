@@ -238,7 +238,9 @@ def user_stats(df, city):
     print('-'*40)
 
 def raw_data(df):
-    """Display raw data if user wants to."""
+    """
+    Displays 5 lines of raw data and provides 5 more lines if indicated by user input.
+    """
 
     stopline = 5
     first_display = input('Would you like to see five rows of raw data?\nEnter yes or no.\n')
